@@ -25,7 +25,35 @@ session_start();
 		
 	}
 
-	
+	$insert = "INSERT INTO tabela_box17 (mecanico, ordem, data, hora, placa, servico, previsao, obs) VALUES (:mecanico, :ordem, :data, :hora, :placa, :servico, :previsao, :observacoes)";
+
+
+			try{
+
+			$result = $pdo->prepare($insert);
+			$result->bindParam(':mecanico', $mecanico, PDO::PARAM_STR);
+			$result->bindParam(':ordem', $ordem, PDO::PARAM_STR);
+			$result->bindParam(':data', $data, PDO::PARAM_STR);
+			$result->bindParam(':hora', $hora, PDO::PARAM_STR);
+			$result->bindParam(':placa', $placa, PDO::PARAM_STR);
+			$result->bindParam(':servico', $servico, PDO::PARAM_STR);
+			$result->bindParam(':previsao', $previsao, PDO::PARAM_STR);
+			$result->bindParam(':observacoes', $obs, PDO::PARAM_STR);
+			$result->execute();
+			$contar = $result->rowCount();
+			if ($insert) {
+
+				echo "cadastrado com sucesso!";
+								
+			}else{
+				echo "algo deu errado";
+
+			}
+
+			}catch(PDOException $e){
+			 // echo $e;
+		}
+
 				
 ?>
 

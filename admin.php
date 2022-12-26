@@ -15,156 +15,90 @@ session_start();
       
       <a href="index.php"><b>Home</b></a> | <a href="index.php" target="_blank"><b>Documentação</b></a> | <a href="?sair" onclick="return confirm('Deseja sair?')"><b>Sair</b></a>
 </div><br>
-<div class="relatorios">
-  <div id="total">
-    <div class="subtitulo">Total De Ordens de Serviço</div>
-    <div class="exibir">
-      <?php 
-        $consulta = "SELECT COUNT(*) AS total_os FROM tabela_box1";
-        $os = $pdo->prepare($consulta);
-        $os->execute();
-        $exibir = $os->fetch(PDO::FETCH_ASSOC);
-          $total1 = $exibir['total_os'];
-
-        $consulta2 = "SELECT COUNT(*) AS total_os2 FROM tabela_box2";
-        $os2 = $pdo->prepare($consulta2);
-        $os2->execute();
-        $exibir2 = $os2->fetch(PDO::FETCH_ASSOC);
-          $total2 = $exibir2['total_os2'];
-
-          $consulta3 = "SELECT COUNT(*) AS total_os3 FROM tabela_box3";
-        $os3 = $pdo->prepare($consulta3);
-        $os3->execute();
-        $exibir3 = $os3->fetch(PDO::FETCH_ASSOC);
-          $total3 = $exibir3['total_os3'];
-
-          $consulta4 = "SELECT COUNT(*) AS total_os4 FROM tabela_box4";
-        $os4 = $pdo->prepare($consulta4);
-        $os4->execute();
-        $exibir4 = $os4->fetch(PDO::FETCH_ASSOC);
-          $total4 = $exibir4['total_os4'];
-
-          $consulta5 = "SELECT COUNT(*) AS total_os5 FROM tabela_box5";
-        $os5 = $pdo->prepare($consulta5);
-        $os5->execute();
-        $exibir5 = $os5->fetch(PDO::FETCH_ASSOC);
-          $total5 = $exibir5['total_os5'];
-
-          $consulta6 = "SELECT COUNT(*) AS total_os6 FROM tabela_box6";
-        $os6 = $pdo->prepare($consulta6);
-        $os6->execute();
-        $exibir6 = $os6->fetch(PDO::FETCH_ASSOC);
-          $total6 = $exibir6['total_os6'];
-
-          $consulta7 = "SELECT COUNT(*) AS total_os7 FROM tabela_box7";
-        $os7 = $pdo->prepare($consulta7);
-        $os7->execute();
-        $exibir7 = $os7->fetch(PDO::FETCH_ASSOC);
-          $total7 = $exibir7['total_os7'];
-
-          $consulta8 = "SELECT COUNT(*) AS total_os8 FROM tabela_box8";
-        $os8 = $pdo->prepare($consulta8);
-        $os8->execute();
-        $exibir8 = $os8->fetch(PDO::FETCH_ASSOC);
-          $total8 = $exibir8['total_os8'];
-
-          $consulta9 = "SELECT COUNT(*) AS total_os9 FROM tabela_box9";
-        $os9 = $pdo->prepare($consulta9);
-        $os9->execute();
-        $exibir9 = $os9->fetch(PDO::FETCH_ASSOC);
-          $total9 = $exibir9['total_os9'];
-
-          $consulta10 = "SELECT COUNT(*) AS total_os10 FROM tabela_box10";
-        $os10 = $pdo->prepare($consulta10);
-        $os10->execute();
-        $exibir10 = $os10->fetch(PDO::FETCH_ASSOC);
-          $total10 = $exibir10['total_os10'];
-
-          $consulta11 = "SELECT COUNT(*) AS total_os11 FROM tabela_box11";
-        $os11 = $pdo->prepare($consulta11);
-        $os11->execute();
-        $exibir11 = $os11->fetch(PDO::FETCH_ASSOC);
-          $total11 = $exibir11['total_os11'];
-
-          $consulta12 = "SELECT COUNT(*) AS total_os12 FROM tabela_box12";
-        $os12 = $pdo->prepare($consulta12);
-        $os12->execute();
-        $exibir12 = $os12->fetch(PDO::FETCH_ASSOC);
-          $total12 = $exibir12['total_os12'];
-
-          $consulta13 = "SELECT COUNT(*) AS total_os13 FROM tabela_box13";
-        $os13 = $pdo->prepare($consulta13);
-        $os13->execute();
-        $exibir13 = $os13->fetch(PDO::FETCH_ASSOC);
-          $total13 = $exibir13['total_os13'];
-
-          $consulta14 = "SELECT COUNT(*) AS total_os14 FROM tabela_box14";
-        $os14 = $pdo->prepare($consulta14);
-        $os14->execute();
-        $exibir14 = $os14->fetch(PDO::FETCH_ASSOC);
-          $total14 = $exibir14['total_os14'];
-
-          $consulta15 = "SELECT COUNT(*) AS total_os15 FROM tabela_box15";
-        $os15 = $pdo->prepare($consulta15);
-        $os15->execute();
-        $exibir15 = $os15->fetch(PDO::FETCH_ASSOC);
-          $total15 = $exibir15['total_os15'];
-
-          $consulta16 = "SELECT COUNT(*) AS total_os16 FROM tabela_box16";
-        $os16 = $pdo->prepare($consulta16);
-        $os16->execute();
-        $exibir16 = $os16->fetch(PDO::FETCH_ASSOC);
-          $total16 = $exibir16['total_os16'];
-
-          $consulta17 = "SELECT COUNT(*) AS total_os17 FROM tabela_box17";
-        $os17 = $pdo->prepare($consulta17);
-        $os17->execute();
-        $exibir17 = $os17->fetch(PDO::FETCH_ASSOC);
-          $total17 = $exibir17['total_os17'];
-
-          $consulta18 = "SELECT COUNT(*) AS total_os18 FROM tabela_box18";
-        $os18 = $pdo->prepare($consulta18);
-        $os18->execute();
-        $exibir18 = $os18->fetch(PDO::FETCH_ASSOC);
-          $total18 = $exibir18['total_os18'];
-
-          $consulta19 = "SELECT COUNT(*) AS total_os19 FROM tabela_box19";
-        $os19 = $pdo->prepare($consulta19);
-        $os19->execute();
-        $exibir19 = $os19->fetch(PDO::FETCH_ASSOC);
-          $total19 = $exibir19['total_os19'];
-
-          $consulta20 = "SELECT COUNT(*) AS total_os20 FROM tabela_box20";
-        $os20 = $pdo->prepare($consulta20);
-        $os20->execute();
-        $exibir20 = $os20->fetch(PDO::FETCH_ASSOC);
-          $total20 = $exibir20['total_os20'];
-
-          $consulta21= "SELECT COUNT(*) AS total_os21 FROM tabela_box21";
-        $os21 = $pdo->prepare($consulta21);
-        $os21->execute();
-        $exibir21 = $os21->fetch(PDO::FETCH_ASSOC);
-          $total21 = $exibir21['total_os21'];
-
-          $consulta22 = "SELECT COUNT(*) AS total_os22 FROM tabela_box22";
-        $os22 = $pdo->prepare($consulta22);
-        $os22->execute();
-        $exibir22 = $os22->fetch(PDO::FETCH_ASSOC);
-          $total22 = $exibir22['total_os22'];
-
-          $totalReal = $total1 + $total2 + $total3 + $total4 + $total5 + $total6 + $total7 + $total8 + $total9 + $total10 + $total11 + $total12 + $total13 + $total14 + $total15 + $total16 + $total17 + $total18 + $total19 + $total20 + $total21 + $total22;
-
-          echo $totalReal;
-      ?>
-    </div>
+<div id="area-admin">
+  <div id="status">
+   <div id="direita">
+     <div id="icone">
+       <img src="icone/comunidade.png">
+       <h3>Relação Numero de OS</h3>
+     </div>
+   </div> 
   </div>
-  <div id="topanual">
-    <div class="subtitulo">Maior Numero de OS / Ano</div>
+  <div id="status">
+    <div id="direita">
+     <div id="icone">
+       <img src="icone/procurar.png">
+       <h3>Ultímas OS</h3>
+     </div>
+   </div> 
   </div>
-  <div id="menoranual">
-    <div class="subtitulo">Menor Numero de OS / Ano</div>
-  </div><br>     
+  <div id="status">
+     <div id="direita">
+     <div id="icone">
+       <img src="icone/conversacao.png">
+       <h3>Ultímas Mensagens</h3>
+     </div>
+   </div> 
   </div>
 </div>
-</body>
-</html>
+<hr><br>
+  	<div id="area-admin">
+    <div id="primeirografico">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Mês', 'Box 1', 'Box 2', 'Box 3', 'Box 4', 'Box 5', 'Box 6', 'Box 7', 'Box 8', 'Box 9', 'Box 10', 'Box 11', 'Box 12', 'Box 13', 'Box 14', 'Box 15', 'Box 16', 'Box 17', 'Box 18', 'Box 19', 'Box 20', 'Box 21', 'Box 22'],
+          ['Agosto', 1000, 400, 200, 120, 589, 545, 952, 1590, 839, 984, 1233, 899, 693, 598, 312, 201, 132, 976, 267, 109, 728, 186]
+    
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Relação de Ordem de Serviço',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    <div id="columnchart_material" style="width: 600px; height: 300px"></div>
+    </div>
+    <div id="">
+      <div id="relatorios">
+    <h3>Relatórios - Ecxel</h3>
+    <div id="direita-admin">
+    <a id="botaoverde" href="relatorio.php">Box 1</a>
+    <a id="botaoverde" href="relatorio2.php">Box 2</a>
+    <a id="botaoverde" href="relatorio3.php">Box 3</a>
+    <a id="botaoverde" href="relatorio4.php">Box 4</a>
+    <a id="botaoverde" href="relatorio5.php">Box 5</a>
+    <a id="botaoverde" href="relatorio6.php">Box 6</a>
+    <a id="botaoverde" href="relatorio7.php">Box 7</a>
+    <a id="botaoverde" href="relatorio8.php">Box 8</a>
+    <a id="botaoverde" href="relatorio9.php">Box 9</a>
+    <a id="botaoverde" href="relatorio10.php">Box 10</a>
+    <a id="botaoverde" href="relatorio11.php">Box 11</a>
+    <a id="botaoverde" href="relatorio12.php">Box 12</a>
+    <a id="botaoverde" href="relatorio13.php">Box 13</a>
+    <a id="botaoverde" href="relatorio14.php">Box 14</a>
+    <a id="botaoverde" href="relatorio15.php">Box 15</a>
+    <a id="botaoverde" href="relatorio16.php">Box 16</a>
+    <a id="botaoverde" href="relatorio17.php">Box 17</a>
+    <a id="botaoverde" href="relatorio18.php">Box 18</a>
+    <a id="botaoverde" href="relatorio19.php">Box 19</a>
+    <a id="botaoverde" href="relatorio20.php">Box 20</a>
+    <a id="botaoverde" href="relatorio21.php">Box 21</a>
+    <a id="botaoverde" href="relatorio22.php">Box 22</a>
+    </div>
+    </div>
+    </div>
+</div><!-- Deixar essa /div -->
+<?php
+	include('footer.php');
+?>

@@ -1,6 +1,6 @@
 <?php 
 	try{
-	$pdo = new PDO("mysql:dbname=transfuturo;host=localhost", "root", "");
+	$pdo = new PDO("mysql:dbname=id17377227_transfuturo;host=localhost", "id17377227_root", "eoq1040012aA@");
 }catch(PDOException $e){
 	echo "Error: " .$e->getMessage();
 }

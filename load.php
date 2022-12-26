@@ -6,7 +6,6 @@ $sql = $pdo->query("SELECT * FROM tabela_box1 ORDER BY id DESC LIMIT 1");
 if ($sql->rowCount() > 0) {
 	foreach ($sql->fetchAll() as $value) {
 		echo "<h3>BOX 1</h3>";
-		echo "<h4>ID: ".$value['id']."</h4>";
 		echo "<h4>MECANICO: ".$value['mecanico']."</h4>";
 		echo "<h4>ORDEM DE SERVIÇO: ".$value['ordem']."</h4>";
 		echo "<h4>DATA: ".$value['data']."</h4>";

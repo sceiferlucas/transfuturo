@@ -1,10 +1,8 @@
-<div class="fixed">
-<footer>
+<footer class="fixed">
 <div class="rodapeesquerdo">TransFuturo 2021</div>
 
 <div class="rodapedireito">Todos os Direitos Reservados</div>
 </footer>
-</div>
 <script src="js/contador.js"></script>
 <script src="js/contador2.js"></script>
 <script src="js/contador3.js"></script>

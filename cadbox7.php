@@ -21,9 +21,11 @@ session_start();
 		$servico = trim(strip_tags($_POST['servico']));
 		$previsao = trim(strip_tags($_POST['previsao']));
 		$obs = trim(strip_tags($_POST['observacoes']));
-		$enviar = filter_input(INPUT_POST, 'enviar', FILTER_SANITIZE_STRING);
+		$enviar = filter_input(INPUT_POST, 'enviar', FILTER_SANITIZE_STRING);		
+		
+	}
 
-		$insert = "INSERT INTO tabela_box7 (mecanico, ordem, data, hora, placa, servico, previsao, obs) VALUES (:mecanico, :ordem, :data, :hora, :placa, :servico, :previsao, :observacoes)";
+	$insert = "INSERT INTO tabela_box7 (mecanico, ordem, data, hora, placa, servico, previsao, obs) VALUES (:mecanico, :ordem, :data, :hora, :placa, :servico, :previsao, :observacoes)";
 
 
 			try{
@@ -50,11 +52,7 @@ session_start();
 
 			}catch(PDOException $e){
 			 // echo $e;
-		}	
-		
-	}
-
-	
+		}
 
 				
 ?>

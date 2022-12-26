@@ -1,10 +1,11 @@
 <?php 
+    ob_start();
 	session_start();
 	include('conexao.php');
 
 	?>
 
-	<!DOCTYPE html>
+	<<!DOCTYPE html>
 	<html>
 	<head>
 		<meta charset="utf-8">
